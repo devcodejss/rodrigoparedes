@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rodrigo Paredes – Concejal Asunción 2026</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Rodrigo Paredes, candidato a Concejal por Asunción 2026. Lista 7, Opción 10. Transparencia, infraestructura, seguridad y desarrollo para cada barrio de nuestra ciudad."/>
+  <meta name="keywords" content="Rodrigo Paredes, Concejal, Asunción, 2026, Lista 7, Partido Colorado, Arnaldo, municipales, Paraguay"/>
+  <meta name="author" content="Rodrigo Paredes"/>
+  <link rel="canonical" href="https://rodrigoparedes.org/"/>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://rodrigoparedes.org/"/>
+  <meta property="og:title" content="Rodrigo Paredes – Concejal Asunción 2026"/>
+  <meta property="og:description" content="Menos promesas, más acción: trabajemos juntos por cada barrio de Asunción. Lista 7, Opción 10."/>
+  <meta property="og:image" content="https://rodrigoparedes.org/images/og-image.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:locale" content="es_PY"/>
+  <meta property="og:site_name" content="Rodrigo Paredes – Concejal 2026"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:url" content="https://rodrigoparedes.org/"/>
+  <meta name="twitter:title" content="Rodrigo Paredes – Concejal Asunción 2026"/>
+  <meta name="twitter:description" content="Menos promesas, más acción: trabajemos juntos por cada barrio de Asunción. Lista 7, Opción 10."/>
+  <meta name="twitter:image" content="https://rodrigoparedes.org/images/og-image.png"/>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Oswald:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet"/>
+
+  <!-- BoxIcons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ████  LOADER  ████ -->
+<div id="loader">
+  <div class="ldr-box">
+    <div class="ldr-ring"></div>
+    <div class="ldr-dots">
+      <span></span><span></span><span></span>
+    </div>
+    <p class="ldr-label">Cargando</p>
+  </div>
+</div>
+
+<!-- ████  COVER SCREEN  ████ -->
+<div id="coverScreen">
+  <div class="scene3d">
+    <div class="book3d" id="book3d">
+      <div class="face face--front">
+        <img src="images/portada.webp" alt="Rodrigo Paredes – Portada" class="face-cover-img"/>
+      </div>
+      <div class="face face--back">
+        <p class="back-quote">"Asunción ya no necesita promesas.<br><strong>Necesita Acciones.</strong>"</p>
+        <p class="back-sub">— Rodrigo Paredes</p>
+      </div>
+      <div class="face face--spine"></div>
+      <div class="face face--top"></div>
+      <div class="face face--bottom"></div>
+      <div class="face face--pages"></div>
+    </div>
+  </div>
+  <div class="open-hint">
+    <i class='bx bx-book-open hint-icon'></i>
+    <p>Clic para abrir el libro</p>
+  </div>
+</div>
+
+
+<!-- ████  OPEN BOOK  ████ -->
+<div id="bookOpen">
+  <button id="btnClose"><i class='bx bx-x'></i> Cerrar</button>
+
+  <!-- StPageFlip container -->
+  <div id="flipBook"></div>
+
+  <!-- Page contents (hidden, cloned into StPageFlip) -->
+  <div id="pageTemplates" style="display:none">
+
+    <!-- PAGE 0: Bienvenida -->
+    <div class="pg pg-welcome">
+      <div class="pg-hero pg-hero--sm">
+        <div class="pg-hero__bg"></div>
+        <div class="pg-hero__content">
+          <h2 class="pg-h2 pg-h2--light">Bienvenido a<br><em>mi proyecto</em></h2>
+        </div>
+      </div>
+      <div class="pg-body-area">
+        <p>¡Hola! Soy Rodrigo Paredes y te doy la más cordial bienvenida a este espacio, el corazón digital de un proyecto que nace del amor por Asunción y el firme deseo de verla prosperar. Si estás aquí, es porque, al igual que yo, crees en el potencial ilimitado de nuestra ciudad y anhelas un futuro mejor para todos.</p>
+        <p>Este no es solo un sitio web; es una invitación abierta a ser parte activa de la transformación que Asunción necesita. Es el punto de encuentro para ideas, propuestas y el trabajo conjunto que nos permitirá construir una capital más justa, segura, verde y con oportunidades para cada uno de sus habitantes.</p>
+      </div>
+    </div>
+
+    <!-- PAGE 1: Sobre el candidato -->
+    <div class="pg pg-sobre">
+      <div class="pg-hero pg-hero--sm">
+        <div class="pg-hero__bg pg-hero__bg--red-gold"></div>
+        <div class="pg-hero__content">
+          <h2 class="pg-h2 pg-h2--light">Sobre el<br><em>Candidato</em></h2>
+        </div>
+      </div>
+      <div class="pg-body-area">
+        <div class="sobre-grid">
+          <div class="sobre-bio">
+            <h3>Raíces Asuncenas, Visión Profesional y Compromiso Familiar</h3>
+            <p>Rodrigo Paredes es un auténtico hijo de Asunción, con profundas raíces en el populoso barrio de la <em>Santísima Trinidad</em>, donde transcurrieron su niñez y juventud. Desde temprana edad, combinó el estudio con el trabajo, forjando una sólida ética y un conocimiento real de las necesidades de nuestra gente.</p>
+            <p>Profesional con título de <em>Licenciado en Administración de Empresas</em>, ha volcado su experiencia y conocimientos en la <strong>función pública</strong>, donde ha demostrado capacidad de gestión y un profundo entendimiento de los desafíos municipales. Su trayectoria es un reflejo de su compromiso con la eficiencia y la transparencia.</p>
+            <p>Hoy, como padre de cuatro hijos, su principal motivación es construir una Asunción próspera y segura. <em>"Como padre, busco dejar un legado de una ciudad mejor para mis hijos y para todos los asuncenos"</em>, afirma.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 2: Misión y Visión -->
+    <div class="pg pg-mision">
+      <div class="pg-hero pg-hero--sm">
+        <div class="pg-hero__bg pg-hero__bg--gold-red"></div>
+        <div class="pg-hero__content">
+          <h2 class="pg-h2 pg-h2--light">Misión<br><em>&amp; Visión</em></h2>
+        </div>
+      </div>
+      <div class="pg-body-area">
+        <div class="mv-block mv-red">
+          <div class="mv-title">
+            <div class="mv-icon"><i class='bx bx-rocket'></i></div>
+            <h3>Misión</h3>
+          </div>
+          <p>Representar activamente los intereses de los ciudadanos de Asunción en la Junta Municipal, impulsando políticas públicas transparentes, eficientes e inclusivas que promuevan el desarrollo sostenible, mejoren la calidad de vida de todos los habitantes y fortalezcan la participación ciudadana en la construcción de una capital más próspera y equitativa.</p>
+        </div>
+        <div class="mv-block mv-gold">
+          <div class="mv-title">
+            <div class="mv-icon"><i class='bx bxs-binoculars'></i></div>
+            <h3>Visión</h3>
+          </div>
+          <p>Una Asunción líder en la región, reconocida por su gestión municipal innovadora y transparente, sus espacios públicos vibrantes y seguros, su economía dinámica que genera oportunidades para todos, y una ciudadanía activa y comprometida con el bienestar colectivo. Donde cada asunceno se sienta orgulloso de su hogar y tenga las herramientas para alcanzar su máximo potencial.</p>
+        </div>
+        <div class="mv-vals">
+          <div><i class='bx bxs-shield-alt-2'></i> Integridad</div>
+          <div><i class='bx bxs-star'></i> Compromiso</div>
+          <div><i class='bx bxs-bolt'></i> Acción</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 3: Metas -->
+    <div class="pg pg-metas">
+      <div class="pg-hero pg-hero--sm">
+        <div class="pg-hero__bg pg-hero__bg--red-dk"></div>
+        <div class="pg-hero__content">
+          <h2 class="pg-h2 pg-h2--light">Objetivos<br><em>Clave</em></h2>
+        </div>
+      </div>
+      <div class="pg-body-area">
+        <p class="metas-intro">Como Concejal, mi compromiso se centra en:</p>
+        <div class="goal-list">
+          <div class="goal">
+            <span class="gn">01</span>
+            <div><h4><i class='bx bxs-show'></i> Transparencia y Participación</h4><p>Abrir la gestión municipal a los ciudadanos y fomentar su involucramiento.</p></div>
+          </div>
+          <div class="goal">
+            <span class="gn">02</span>
+            <div><h4><i class='bx bxs-leaf'></i> Asunción Limpia y Sostenible</h4><p>Mejorar la gestión de residuos, promover el reciclaje y cuidar nuestros espacios verdes.</p></div>
+          </div>
+          <div class="goal">
+            <span class="gn">03</span>
+            <div><h4><i class='bx bxs-traffic'></i> Infraestructura y Movilidad</h4><p>Optimizar calles, transporte público y fomentar la movilidad alternativa.</p></div>
+          </div>
+          <div class="goal">
+            <span class="gn">04</span>
+            <div><h4><i class='bx bxs-store'></i> Desarrollo Económico Local</h4><p>Apoyar a emprendedores y PyMES, simplificando trámites y generando oportunidades.</p></div>
+          </div>
+          <div class="goal">
+            <span class="gn">05</span>
+            <div><h4><i class='bx bxs-shield'></i> Seguridad Barrial</h4><p>Fortalecer la seguridad en cada barrio con iluminación, vigilancia y participación vecinal.</p></div>
+          </div>
+        </div>
+        <p class="metas-cierre">Trabajaremos juntos por una Asunción más próspera, segura y justa para todos.</p>
+      </div>
+    </div>
+
+    <!-- PAGE 4a: Objetivos Específicos (1/2) -->
+    <div class="pg pg-obj">
+      <div class="pg-hero pg-hero--sm">
+        <div class="pg-hero__bg pg-hero__bg--red-gold"></div>
+        <div class="pg-hero__content">
+          <h2 class="pg-h2 pg-h2--light">Objetivos<br><em>Específicos</em></h2>
+        </div>
+      </div>
+      <div class="pg-body-area">
+        <p class="metas-intro">Mi gestión se enfocará en objetivos claros y medibles para cada área clave:</p>
+        <div class="obj-area">
+          <h4 class="obj-area__title"><i class='bx bxs-graduation'></i> Educación</h4>
+          <ul>
+            <li>Gestionar mejoras en edificios y equipamiento de escuelas municipales.</li>
+            <li>Implementar iniciativas de refuerzo académico y acceso a tecnología.</li>
+          </ul>
+        </div>
+        <div class="obj-area">
+          <h4 class="obj-area__title"><i class='bx bxs-leaf'></i> Medio Ambiente</h4>
+          <ul>
+            <li>Crear y mantener más espacios verdes en barrios y avenidas.</li>
+            <li>Desarrollar puntos de recolección y campañas de reciclaje.</li>
+          </ul>
+        </div>
+        <div class="obj-area">
+          <h4 class="obj-area__title"><i class='bx bxs-heart-circle'></i> Salud</h4>
+          <ul>
+            <li>Apoyar la optimización de servicios en puestos de salud municipales.</li>
+            <li>Impulsar programas de prevención y bienestar comunitario.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 4b: Objetivos Específicos (2/2) -->
+    <div class="pg pg-obj">
+      <div class="pg-hero pg-hero--sm">
+        <div class="pg-hero__bg pg-hero__bg--red-gold"></div>
+        <div class="pg-hero__content">
+          <h2 class="pg-h2 pg-h2--light">Objetivos<br><em>Específicos</em></h2>
+        </div>
+      </div>
+      <div class="pg-body-area">
+        <div class="obj-area">
+          <h4 class="obj-area__title"><i class='bx bxs-trophy'></i> Deporte</h4>
+          <ul>
+            <li>Recuperar y equipar canchas y polideportivos barriales.</li>
+            <li>Apoyar ligas y actividades para todas las edades y capacidades.</li>
+          </ul>
+        </div>
+        <div class="obj-area">
+          <h4 class="obj-area__title"><i class='bx bxs-star'></i> Juventud</h4>
+          <ul>
+            <li>Desarrollar talleres y cursos para el desarrollo de habilidades laborales.</li>
+            <li>Impulsar espacios de participación y expresión para jóvenes asuncenos.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 6: Vota -->
+    <div class="pg pg-vota">
+      <div class="pg-hero pg-hero--sm">
+        <div class="pg-hero__bg pg-hero__bg--red-dk"></div>
+        <div class="pg-hero__content">
+          <h2 class="pg-h2 pg-h2--light">¡Tu voto<br><em>es acción!</em></h2>
+        </div>
+      </div>
+      <div class="pg-body-area">
+        <div class="vota-box">
+          <p>Con la mirada puesta en el futuro de Asunción. Domingo 7 de junio <span class="vota-yellow">votá Lista 7</span>, Opción 10. <em>Juntos</em>, dejaremos un legado de bienestar para nuestras familias. ¡Súmate!</p>
+        </div>
+        <p class="quote-final">Menos promesas, <span style="color:var(--red)">más acción</span>: trabajemos juntos por cada barrio de <span style="color:var(--red)">Asunción</span>.</p>
+      </div>
+    </div>
+
+    <!-- PAGE 7: Flyer (último) -->
+    <div class="pg pg-flyer">
+      <img src="images/flyer-final.webp" alt="Flyer Rodrigo Paredes"/>
+    </div>
+
+  </div><!-- /pageTemplates -->
+
+  <!-- NAV -->
+  <nav class="nav-bar">
+    <button class="nav-btn" id="btnPrev" title="Anterior">
+      <i class='bx bx-chevron-left'></i>
+    </button>
+    <div id="navDots"></div>
+    <button class="nav-btn" id="btnNext" title="Siguiente">
+      <i class='bx bx-chevron-right'></i>
+    </button>
+  </nav>
+</div>
+
+
+<!-- LIBS -->
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<!-- StPageFlip -->
+<script src="https://unpkg.com/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script src="script.js"></script>
+</body>
+</html>
