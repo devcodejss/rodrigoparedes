@@ -33,22 +33,10 @@ body {
   overflow: hidden;
   font-family: var(--font-b);
   color: var(--ink);
-  background: url('https://www.abc.com.py/resizer/v2/JX4RPOZY3BAJNEGKUSCAE44EII.jpg?auth=b70a595ccbaabc3fe32b19a1d649b5465295f818a3e11fbbeb452eb517acbbc8&width=770&smart=true') center center / cover no-repeat;
+  background: url('images/fondo.webp') center center / cover no-repeat;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background:
-    linear-gradient(135deg,
-      rgba(40, 0, 6, .90) 0%,
-      rgba(70, 0, 10, .85) 40%,
-      rgba(55, 0, 8, .88) 70%,
-      rgba(20, 0, 4, .95) 100%);
-}
+
 
 /* ════════════════════════════
    LOADER
