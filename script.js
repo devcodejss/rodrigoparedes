@@ -17,7 +17,8 @@ const IMAGES_TO_PRELOAD = [
 function preloadImages(urls) {
   return Promise.all(urls.map(url => new Promise(resolve => {
     const img = new Image();
-    img.onload = img.onerror = resolve;
+    img.onload  = () => resolve(img);
+    img.onerror = () => resolve(null);
     img.src = url;
   })));
 }
@@ -31,12 +32,12 @@ function hideLoader() {
 Promise.all([
   new Promise(resolve => window.addEventListener('load', resolve)),
   preloadImages(IMAGES_TO_PRELOAD),
-]).then(startApp);
+]).then(([, imgs]) => startApp(imgs));
 
 /* ════════════════════════════════
    APP
 ════════════════════════════════ */
-function startApp() {
+function startApp(preloadedImgs) {
   AOS.init({ duration: 500, once: true, offset: 20 });
 
   const $ = id => document.getElementById(id);
@@ -56,6 +57,13 @@ function startApp() {
   let isMobile   = window.innerWidth <= 600;
   let busy       = false;
 
+  /* Ratio del flyer — el libro adopta este ratio para que la imagen llene la hoja exacta */
+  let flyerRatio = 0.62;
+  const flyerImg = (preloadedImgs || []).find(img => img && img.src && img.src.includes('flyer-final'));
+  if (flyerImg && flyerImg.naturalWidth && flyerImg.naturalHeight) {
+    flyerRatio = flyerImg.naturalWidth / flyerImg.naturalHeight;
+  }
+
   /* ════════════════════════════════
      BOOK SIZING
   ════════════════════════════════ */
@@ -63,14 +71,19 @@ function startApp() {
     const W = window.innerWidth;
     const H = window.innerHeight;
     if (W <= 600) {
-      return { width: Math.round(W * 0.99), height: Math.round(H - 124), single: true };
+      const pw = Math.round(W * 0.99);
+      const ph = Math.round(pw / flyerRatio);
+      const maxH = H - 124;
+      if (ph > maxH) {
+        return { width: Math.round(maxH * flyerRatio), height: maxH, single: true };
+      }
+      return { width: pw, height: ph, single: true };
     }
     const maxH = Math.min(H - 70, 1100);
     const maxW = Math.min(W * 0.995, 1600);
-    const ratio = 0.62;
     let ph = maxH;
-    let pw = ph * ratio;
-    if (pw * 2 > maxW) { pw = maxW / 2; ph = pw / ratio; }
+    let pw = ph * flyerRatio;
+    if (pw * 2 > maxW) { pw = maxW / 2; ph = pw / flyerRatio; }
     return { width: Math.round(pw * 2), height: Math.round(ph), single: false };
   }
 
